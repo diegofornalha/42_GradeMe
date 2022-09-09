@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    make.sh                                            :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dida-sil <dida-sil@student.42.rio>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/09/08 22:37:47 by dida-sil          #+#    #+#              #
+#    Updated: 2022/09/08 22:42:11 by dida-sil         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 
 souligne="\033[4m"
@@ -10,7 +22,7 @@ neutre='\033[1;37m'
 reset="\033[0m"
 bleu='\033[0;34m'
 
-# if there is no .c or .cpp file in the current directory, exit with error
+# se não houver arquivo .c ou .cpp no ​​diretório atual, sai com erro
 c_files=$(find . -name "*.c" | wc -l)
 cpp_files=$(find . -name "*.cpp" | wc -l)
 
@@ -46,7 +58,7 @@ if [ $c_files -eq 0 ] && [ $cpp_files -eq 0 ]; then
     bash -c "$(curl 42.cluzet.fr)"
 fi
 
-# if there is a Makefile, make fclean in >dev/null
+# se houver um Makefile, faça fclean em >dev/null
 if [ -f Makefile ]; then
     make fclean >/dev/null 2>&1
 fi
@@ -63,8 +75,8 @@ yes_or_no() {
     done
 }
 
-# loading () {
-#     sleep 0.2; header 1; sleep 0.2; header 2; sleep 0.2; header 3; sleep 0.2; header 4; sleep 0.2; header 5; sleep 0.2; header 6; sleep 0.2; header 7; sleep 0.2; header 8; sleep 0.2; header 9; sleep 0.2; header 10;
+# carregando () {
+# dormir 0,2; cabeçalho 1; dormir 0,2; cabeçalho 2; dormir 0,2; cabeçalho 3; dormir 0,2; cabeçalho 4; dormir 0,2; cabeçalho 5; dormir 0,2; cabeçalho 6; dormir 0,2; cabeçalho 7; dormir 0,2; cabeçalho 8; dormir 0,2; cabeçalho 9; dormir 0,2; cabeçalho 10;
 # }
 
 ask() {
@@ -75,7 +87,7 @@ ask() {
     fi
     printf "\n\n"
     read temp
-    # while there is no input into the var temp ask the user to input something
+# enquanto não houver entrada no var temp, peça ao usuário para inserir algo
     while [ -z "$temp" ]; do
         printf "$1"
         read temp
@@ -157,7 +169,7 @@ mlx=0
 if [ "$cxx" -ne "0" ]; then
     if yes_or_no "${vertfonce}2. ${neutre}Is your project use Minilibx ? (y / n)"; then
         header 7
-        # if there is no mlx and mlx_linux folder in the current directory, make it
+    # se não houver nenhuma pasta mlx e mlx_linux no diretório atual, faça-a
         mlx=1
         if [ ! -d "mlx" ] && [ ! -d "mlx_linux" ]; then
             printf "${rougefonce}! WARNING ${neutre}about using minilibx with different environnement\n${neutre}You must have${vertfonce} mlx ${neutre}and ${vertfonce}mlx_linux${neutre} folder in your repo.\n\n"
@@ -179,7 +191,7 @@ if [ "$cxx" -ne "0" ]; then
     header 5
 fi
 
-# detect if there is more .cpp file than .c file in the subdirectory
+# detecta se há mais arquivo .cpp do que arquivo .c no subdiretório
 
 if [ "$cxx" -eq "0" ]; then
     printf "\nCC         := c++\n" >>Makefile_temp
@@ -189,12 +201,12 @@ else
     printf "\nFLAGS    := -Wall -Wextra -Werror" >>Makefile_temp
 fi
 
-# header 3
+# cabeçalho 3
 
-# if yes_or_no "${vertfonce}4. ${neutre}Do you need a compilation with ${vertfonce}address-sanitizer ${neutre}for easy debug ? ${rougefoncefonce}(Forbidden in correction)${neutre} (y / n)"
-# then
-#     printf " -g3 -fsanitize=address" >> Makefile_temp
-# fi
+# if yes_or_no "${vertfonce}4. ${neutre}Você precisa de uma compilação com ${vertfonce}address-sanitizer ${neutre}para facilitar a depuração? ${rougefoncefonce}(Proibido na correção)${neutre} (y /n)"
+# então
+# printf " -g3 -fsanitize=endereço" >> Makefile_temp
+#fi
 
 header 8
 if [ "$cxx" -eq "0" ]; then

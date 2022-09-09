@@ -1,40 +1,40 @@
 # 42_GradeMe
-Automatic testing for all 42, C and CPP projects. Makefile relink, Header wrong name, Coplien Form and more.
+Teste automático para todos os projetos 42, C e CPP. Makefile relink, nome errado do cabeçalho, formulário Coplien e muito mais.
 
 
 #### ---------
 
-### 🥳 NEW ! You can run the script on MAC and LINUX WITHOUT installation or rights required!
-####         USE THIS COMMAND : `bash -c "$(curl https://grademe.fr)"` 
-####         Find this command on [GradeMe.fr](https://www.grademe.fr) !
+### 🥳 NOVO ! Você pode executar o script em MAC e LINUX SEM instalação ou direitos necessários!
+####         USE ESTE COMANDO : `bash -c "$(curl https://grademe.fr)"` 
+####         Encontre este comando em [GradeMe.fr](https://www.grademe.fr) !
 
 #### ---------
 
-#### You can now run it anywhere, as in correction at 42.
+#### Agora você pode executá-lo em qualquer lugar, como na correção em 42.
 
 ![Capture d’écran 2022-02-09 à 05 31 48](https://user-images.githubusercontent.com/55356071/153122308-7a6c5a90-bc58-490b-b815-c4db6bc9bcdc.png)
 
 ## C Projects :
-### ✔️ Makefile relink test
-### ✔️ Makefile Flags check
-### ✔️ 42Header check names
-### ✔️ Norminette check
-### ✔️ GuardGate check
-### ✔️ Launch auto on VSCode
+### ✔️ Teste de relink de makefile
+### ✔️ Verificação de sinalizadores de makefile
+### ✔️ 42 Nomes de verificação de cabeçalho
+### ✔️ Verificação de norminete
+### ✔️ Verificação do GuardGate
+### ✔️ Iniciar automaticamente no VSCode
 
 ![Capture d’écran 2022-02-09 à 05 51 34](https://user-images.githubusercontent.com/55356071/153124244-f2348ee5-16d0-4e73-b3f9-757638196996.png)
 
-## This script automatically launches the test associated with the project. 
-## Here are all the available tests:
+## Este script inicia automaticamente o teste associado ao projeto.
+## Aqui estão todos os testes disponíveis:
 
 ### 🔺 LIBFT, GET_NEXT_LINE, FT_PRINTF, SO_LONG, PUSH_SWAP, CUB3D, PHILOSOPHERS, FT_CONTAINERS & ALL CPP MODULES
 
-## CPP Projects :
-### ✔️ Makefile Flags check
-### ✔️ COPLIEN Form check
-### ✔️ Virtual check
-### ✔️ Forbidden Function check (using, friend, printf etc...)
-### ✔️ GuardGate check
-### ✔️ Launch auto on VSCode
+## Projetos CPP:
+### ✔️ Verificação de sinalizadores de makefile
+### ✔️ COPLIEN Verificação do formulário
+### ✔️ Verificação virtual
+### ✔️ Verificação de função proibida (usando, amigo, printf etc...)
+### ✔️ Verificação do GuardGate
+### ✔️ Inicie o auto no VSCode
 
-👋🏼 If you encounter any problems when launching the script or if you have any questions, don't hesitate to send me an e-mail : jcluzet@student.42.fr, or leave an Issue
+👋🏼 Se você encontrar algum problema ao iniciar o script ou se tiver alguma dúvida, não hesite enviar PR ou abrir uma issue.
